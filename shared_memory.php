@@ -36,7 +36,7 @@ class shmem{
 
     // I think that faster execution and shorter returned string are more important than safety in this situation.
   const PROTECTION='crc32'; // You can define new hash function on your own, so there must be it's name or anonymous function.
-  private static $hashed_password=NULL;
+  private $hashed_password=NULL;
 
   function __construct($password){
     if(empty($password)) throw new Exception(self::ERR_PASSWD);
